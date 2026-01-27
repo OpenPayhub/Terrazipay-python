@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Main",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "main"
+        },
+       {
+            "name": "X402 client",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "src.terrazip.x402_mock.clients.client"
+        },
+        {
+            "name": "X402 server",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "src.terrazip.x402_mock.servers.server"
+        },
+        {
+            "name": "AI TEST",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "src.terrazip.ai.graph"
+        },
+    ]
+}
