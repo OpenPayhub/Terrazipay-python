@@ -25,3 +25,8 @@ x402 = [
     "eth-account>=0.13.7",
     "web3>=7.14.0",
 ]
+
+[tool.uv.workspace]
+members = [
+    "src/terrazip/x402_mock",
+]
