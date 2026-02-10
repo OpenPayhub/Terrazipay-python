@@ -1,0 +1,32 @@
+name: Deploy x402-mock Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/terrazip/x402_mock/**'  # 只在此目录变化时触发
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/terrazip/x402_mock  # 设置默认工作目录
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocstrings[python]
+      
+      - name: Deploy docs
+        run: mkdocs gh-deploy --force
