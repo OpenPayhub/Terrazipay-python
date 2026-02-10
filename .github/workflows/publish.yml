@@ -48,7 +48,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dist
-        path: dist/
+        path: src/terrazip/x402_mock/dist/
   
   publish-testpypi:
     needs: build
