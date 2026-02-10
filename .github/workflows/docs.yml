@@ -2,10 +2,10 @@ name: Deploy x402-mock Documentation
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - 'src/terrazip/x402_mock/**'  # 只在此目录变化时触发
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: src/terrazip/x402_mock  # 设置默认工作目录
+        working-directory: src/terrazip/x402_mock
     
     steps:
       - uses: actions/checkout@v4
