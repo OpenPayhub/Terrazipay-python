@@ -2,6 +2,16 @@
 
 `x402_mock` is a **production-grade module** that fully implements the **HTTP 402 status code payment workflow**.
 
+---
+
+## ⚠️ Important Notice: Module Has Been Separated
+
+> **This module has been separated into an independent repository at: https://github.com/OpenPayhub/x402-mock**  
+> **Please refer to this repository for the latest version.**
+
+---
+
+
 ## Module Features
 
 This module completes the full payment workflow based on the **HTTP 402 Payment Required** status code, seamlessly integrating Web2 HTTP protocol with Web3 on-chain payments.
